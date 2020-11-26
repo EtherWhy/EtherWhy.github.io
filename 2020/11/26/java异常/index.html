@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | Ether</title>
+  <title>Ether</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hello World | Ether">
+  <meta name="description" content="Ether">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="多态 即同一方法可以根据发送对象的不同而采取不同的行为方式。’ 一个对象的实际类型是确定的，但可以指向对象的引用的类型有很多。  super  调用父类构造方法时 ，只能出现在第一行。 父类在写有参构造方法时，最好在写一个无参构造，不然子类使用无参构造方法时会报错。 this 和 super 不能同时调用无参构造方法。  1234567891011121314151617public void F">
 <meta property="og:type" content="article">
@@ -203,9 +203,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <h1 class="article-title">Hello World</h1>
+        <article id="post-java异常" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
         
@@ -215,7 +213,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-16 17:25:13'>2020-11-16 17:25</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-23 22:55:47'>2020-11-26 16:48</time>
         
     </div>
     <div class="article-meta">
@@ -237,7 +235,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#java%E5%BC%82%E5%B8%B8"><span class="toc-text">java异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-text">实际经验总结</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -253,19 +251,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="java异常"><a href="#java异常" class="headerlink" title="java异常"></a>java异常</h1><ul>
+<li>要理解Java异常处理是如何工作的，你需要掌握以下三种类型的异常：</li>
+</ul>
+<ul>
+<li>检查性异常：最具代表的检查性异常的用户的错误或问题的异常，这是程序无法预见的。例如要打开一个不存在文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。</li>
+<li>运行时异常：运行时异常时可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。</li>
+<li>错误：错误不是异常，而是脱离程序员控制的问题。错误在代码中通常被忽略。例如，当栈溢出时，一个错误就发生了，它们在编译时也检查不到的。</li>
+</ul>
+<p><img src="C:\Users\Ether\Desktop\新建文件夹\异常.png"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//监控区域</span></span><br><span class="line">&#125;<span class="keyword">catch</span>()&#123;<span class="keyword">catch</span>(想要捕获的异常类型)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;<span class="keyword">catch</span>()&#123;<span class="comment">//可以多个但是异常类型要从小到大</span></span><br><span class="line">    </span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="comment">//善后</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//快捷键先选中测试代码</span></span><br><span class="line">         crtl+alt+t</span><br><span class="line"><span class="keyword">throw</span> <span class="comment">//主动在Java抛出异常</span></span><br><span class="line"><span class="keyword">throws</span> <span class="comment">//主动在方法中抛出异常</span></span><br><span class="line">             </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="实际经验总结"><a href="#实际经验总结" class="headerlink" title="实际经验总结"></a>实际经验总结</h2><ul>
+<li>处理运行异常时，采用逻辑去合理规避同时辅助try-catch处理</li>
+<li>在多重catch块后面，可以加一个catch（Exception)来处理可能辉被遗漏的异常</li>
+<li>对于不确定的代码，也可以加上try-catch,处理潜在的异常</li>
+<li>尽量去处理异常，切忌只是简单地调用printStackTrace()打印输出。</li>
+<li>具体如何去处理异常，要根据不同的业务需求和异常类型去决定</li>
+<li>尽量添加finally语句块去释放占用的资源</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

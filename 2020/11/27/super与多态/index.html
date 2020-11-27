@@ -6,20 +6,18 @@
   <meta name="keywords" content=" 多态 ">
   <meta name="description" content="多态 | Ether">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="java异常 要理解Java异常处理是如何工作的，你需要掌握以下三种类型的异常：   检查性异常：最具代表的检查性异常的用户的错误或问题的异常，这是程序无法预见的。例如要打开一个不存在文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。 运行时异常：运行时异常时可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。 错误：错误不是异常，而是脱离程序员控制的问题。错误在代码">
+<meta name="description" content="多态 即同一方法可以根据发送对象的不同而采取不同的行为方式。’ 一个对象的实际类型是确定的，但可以指向对象的引用的类型有很多。  super  调用父类构造方法时 ，只能出现在第一行。 父类在写有参构造方法时，最好在写一个无参构造，不然子类使用无参构造方法时会报错。 this 和 super 不能同时调用无参构造方法。  1234567891011121314151617public void F">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java异常">
-<meta property="og:url" content="http://example.com/2020/11/27/java%E5%BC%82%E5%B8%B8/index.html">
+<meta property="og:title" content="多态">
+<meta property="og:url" content="http://example.com/2020/11/27/super%E4%B8%8E%E5%A4%9A%E6%80%81/index.html">
 <meta property="og:site_name" content="Ether">
-<meta property="og:description" content="java异常 要理解Java异常处理是如何工作的，你需要掌握以下三种类型的异常：   检查性异常：最具代表的检查性异常的用户的错误或问题的异常，这是程序无法预见的。例如要打开一个不存在文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。 运行时异常：运行时异常时可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。 错误：错误不是异常，而是脱离程序员控制的问题。错误在代码">
+<meta property="og:description" content="多态 即同一方法可以根据发送对象的不同而采取不同的行为方式。’ 一个对象的实际类型是确定的，但可以指向对象的引用的类型有很多。  super  调用父类构造方法时 ，只能出现在第一行。 父类在写有参构造方法时，最好在写一个无参构造，不然子类使用无参构造方法时会报错。 this 和 super 不能同时调用无参构造方法。  1234567891011121314151617public void F">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:/Users/Ether/Desktop/新建文件夹/异常.png">
-<meta property="article:published_time" content="2020-11-27T11:43:00.000Z">
-<meta property="article:modified_time" content="2020-11-27T11:44:41.037Z">
+<meta property="article:published_time" content="2020-11-27T11:51:00.000Z">
+<meta property="article:modified_time" content="2020-11-27T11:52:23.044Z">
 <meta property="article:author" content="EtherWhy">
-<meta property="article:tag" content="Java异常">
+<meta property="article:tag" content="多态">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/Ether/Desktop/新建文件夹/异常.png">
 
 
 <link rel="icon" href="/img/space.jpg">
@@ -94,10 +92,10 @@
     
     
     </div>
-    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+    <div><a  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="3">
-
+<input type="hidden" id="yelog_site_word_count" value="836">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -229,6 +227,8 @@
         
     </div>
     <div class="article-meta">
+        
+        <span>字数:307</span>
         
         
         <span id="busuanzi_container_page_pv">
